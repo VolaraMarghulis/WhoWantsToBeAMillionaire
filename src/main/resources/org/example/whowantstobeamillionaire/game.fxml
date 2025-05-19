@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.40210843373493976" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="448.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/aa76393a75b87dc673421d1bd2db7243.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="319.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="50/50">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Call a Friend">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="72.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Ask Audience">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="181.0" layoutY="73.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="139.0" text="Start Game" />
+            <Label layoutX="14.0" layoutY="62.0" prefHeight="30.0" prefWidth="114.0" text="Level :">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="92.0" prefHeight="30.0" prefWidth="114.0" text="Score : ">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="325.0" layoutY="122.0" prefHeight="22.0" prefWidth="114.0" text="Time : ">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </Label>
+         </children>
+    </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="598.0">
+         <children>
+            <Button fx:id="answer3" layoutX="79.0" layoutY="165.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" />
+            <Button fx:id="answer1" layoutX="79.0" layoutY="98.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" />
+            <Button fx:id="answer4" layoutX="312.0" layoutY="165.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" />
+            <Button fx:id="answer2" layoutX="312.0" layoutY="98.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0" />
+            <Label fx:id="question" layoutX="79.0" layoutY="14.0" prefHeight="61.0" prefWidth="440.0" text="Question" />
+         </children>
+    </AnchorPane>
+  </items>
+</SplitPane>
