@@ -4,16 +4,10 @@ public class Answer {
     private String text;
     private boolean isCorrect;
 
-    public Answer(String text, boolean isCorrect) {
-        this.text = text;
-        this.isCorrect = isCorrect;
-    }
+    public String getText() { return text; }
+    public boolean isCorrect() { return isCorrect; }
 
-    public String getText() {
-        return text;
-    }
-
-    public boolean getIsCorrect() {
-        return isCorrect;
-    }
+    // setters required for Jackson or Gson
+    public void setText(String text) { this.text = text; }
+    public void setCorrect(boolean isCorrect) { this.isCorrect = isCorrect; }
 }

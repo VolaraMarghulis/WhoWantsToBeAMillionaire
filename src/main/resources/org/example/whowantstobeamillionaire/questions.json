@@ -1,0 +1,273 @@
+[
+  {
+    "questionText": "What is the largest planet in our solar system?",
+    "answers": [
+      { "text": "Earth", "isCorrect": false },
+      { "text": "Jupiter", "isCorrect": true },
+      { "text": "Mars", "isCorrect": false },
+      { "text": "Saturn", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which element has the chemical symbol 'O'?",
+    "answers": [
+      { "text": "Gold", "isCorrect": false },
+      { "text": "Oxygen", "isCorrect": true },
+      { "text": "Osmium", "isCorrect": false },
+      { "text": "Iron", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Who painted the Mona Lisa?",
+    "answers": [
+      { "text": "Vincent van Gogh", "isCorrect": false },
+      { "text": "Leonardo da Vinci", "isCorrect": true },
+      { "text": "Pablo Picasso", "isCorrect": false },
+      { "text": "Claude Monet", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which language is primarily spoken in Brazil?",
+    "answers": [
+      { "text": "Spanish", "isCorrect": false },
+      { "text": "Portuguese", "isCorrect": true },
+      { "text": "French", "isCorrect": false },
+      { "text": "English", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the boiling point of water at sea level?",
+    "answers": [
+      { "text": "100°C", "isCorrect": true },
+      { "text": "90°C", "isCorrect": false },
+      { "text": "80°C", "isCorrect": false },
+      { "text": "120°C", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which continent is the Sahara Desert located on?",
+    "answers": [
+      { "text": "Asia", "isCorrect": false },
+      { "text": "Africa", "isCorrect": true },
+      { "text": "Australia", "isCorrect": false },
+      { "text": "South America", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the main ingredient in guacamole?",
+    "answers": [
+      { "text": "Avocado", "isCorrect": true },
+      { "text": "Tomato", "isCorrect": false },
+      { "text": "Lettuce", "isCorrect": false },
+      { "text": "Onion", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "How many legs does a spider have?",
+    "answers": [
+      { "text": "6", "isCorrect": false },
+      { "text": "8", "isCorrect": true },
+      { "text": "10", "isCorrect": false },
+      { "text": "12", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What gas do plants absorb from the atmosphere?",
+    "answers": [
+      { "text": "Oxygen", "isCorrect": false },
+      { "text": "Nitrogen", "isCorrect": false },
+      { "text": "Carbon Dioxide", "isCorrect": true },
+      { "text": "Hydrogen", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which ocean is the largest?",
+    "answers": [
+      { "text": "Atlantic Ocean", "isCorrect": false },
+      { "text": "Indian Ocean", "isCorrect": false },
+      { "text": "Pacific Ocean", "isCorrect": true },
+      { "text": "Arctic Ocean", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which instrument has keys, pedals, and strings?",
+    "answers": [
+      { "text": "Guitar", "isCorrect": false },
+      { "text": "Piano", "isCorrect": true },
+      { "text": "Drums", "isCorrect": false },
+      { "text": "Flute", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "In which year did the Titanic sink?",
+    "answers": [
+      { "text": "1912", "isCorrect": true },
+      { "text": "1905", "isCorrect": false },
+      { "text": "1920", "isCorrect": false },
+      { "text": "1898", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the chemical formula for water?",
+    "answers": [
+      { "text": "CO2", "isCorrect": false },
+      { "text": "H2O", "isCorrect": true },
+      { "text": "O2", "isCorrect": false },
+      { "text": "NaCl", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country is known as the Land of the Rising Sun?",
+    "answers": [
+      { "text": "China", "isCorrect": false },
+      { "text": "Japan", "isCorrect": true },
+      { "text": "Thailand", "isCorrect": false },
+      { "text": "India", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "How many continents are there on Earth?",
+    "answers": [
+      { "text": "5", "isCorrect": false },
+      { "text": "6", "isCorrect": false },
+      { "text": "7", "isCorrect": true },
+      { "text": "8", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the smallest prime number?",
+    "answers": [
+      { "text": "0", "isCorrect": false },
+      { "text": "1", "isCorrect": false },
+      { "text": "2", "isCorrect": true },
+      { "text": "3", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which planet is known as the Red Planet?",
+    "answers": [
+      { "text": "Venus", "isCorrect": false },
+      { "text": "Mars", "isCorrect": true },
+      { "text": "Jupiter", "isCorrect": false },
+      { "text": "Mercury", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which animal is known as the King of the Jungle?",
+    "answers": [
+      { "text": "Elephant", "isCorrect": false },
+      { "text": "Lion", "isCorrect": true },
+      { "text": "Tiger", "isCorrect": false },
+      { "text": "Leopard", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which country invented paper?",
+    "answers": [
+      { "text": "Egypt", "isCorrect": false },
+      { "text": "China", "isCorrect": true },
+      { "text": "Greece", "isCorrect": false },
+      { "text": "India", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the square root of 81?",
+    "answers": [
+      { "text": "7", "isCorrect": false },
+      { "text": "8", "isCorrect": false },
+      { "text": "9", "isCorrect": true },
+      { "text": "10", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What does 'CPU' stand for?",
+    "answers": [
+      { "text": "Central Processing Unit", "isCorrect": true },
+      { "text": "Computer Power Unit", "isCorrect": false },
+      { "text": "Core Program Unit", "isCorrect": false },
+      { "text": "Central Peripheral Unit", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which language is primarily used for web development?",
+    "answers": [
+      { "text": "Python", "isCorrect": false },
+      { "text": "HTML", "isCorrect": true },
+      { "text": "C", "isCorrect": false },
+      { "text": "Java", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What does 'HTTP' stand for?",
+    "answers": [
+      { "text": "HyperText Transfer Protocol", "isCorrect": true },
+      { "text": "High Tech Transfer Protocol", "isCorrect": false },
+      { "text": "Hyper Terminal Tracking Process", "isCorrect": false },
+      { "text": "Host To Transfer Process", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which of the following is NOT an operating system?",
+    "answers": [
+      { "text": "Linux", "isCorrect": false },
+      { "text": "Windows", "isCorrect": false },
+      { "text": "Oracle", "isCorrect": true },
+      { "text": "macOS", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What does 'RAM' stand for?",
+    "answers": [
+      { "text": "Random Access Memory", "isCorrect": true },
+      { "text": "Read Access Memory", "isCorrect": false },
+      { "text": "Run Access Module", "isCorrect": false },
+      { "text": "Remote Active Memory", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which company developed the Windows operating system?",
+    "answers": [
+      { "text": "Apple", "isCorrect": false },
+      { "text": "Microsoft", "isCorrect": true },
+      { "text": "Google", "isCorrect": false },
+      { "text": "IBM", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What is the brain of the computer?",
+    "answers": [
+      { "text": "RAM", "isCorrect": false },
+      { "text": "Hard Drive", "isCorrect": false },
+      { "text": "CPU", "isCorrect": true },
+      { "text": "Monitor", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "Which one is a programming language?",
+    "answers": [
+      { "text": "HTTP", "isCorrect": false },
+      { "text": "SQL", "isCorrect": false },
+      { "text": "JavaScript", "isCorrect": true },
+      { "text": "USB", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What does 'AI' stand for in computer science?",
+    "answers": [
+      { "text": "Automated Input", "isCorrect": false },
+      { "text": "Artificial Intelligence", "isCorrect": true },
+      { "text": "Analog Integration", "isCorrect": false },
+      { "text": "Automated Internet", "isCorrect": false }
+    ]
+  },
+  {
+    "questionText": "What type of storage is a solid-state drive (SSD)?",
+    "answers": [
+      { "text": "Magnetic", "isCorrect": false },
+      { "text": "Optical", "isCorrect": false },
+      { "text": "Flash", "isCorrect": true },
+      { "text": "Mechanical", "isCorrect": false }
+    ]
+  }
+]
+
