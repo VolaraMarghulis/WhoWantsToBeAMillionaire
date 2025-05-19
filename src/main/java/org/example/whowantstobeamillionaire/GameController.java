@@ -1,11 +1,11 @@
 package org.example.whowantstobeamillionaire;
 
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.Alert;
 
-public class Controller {
+public class GameController {
     @FXML
     private Button fiftyFiftyButton, phoneButton, audienceButton, startButton;
     @FXML
