@@ -5,9 +5,9 @@ public class Answer {
     private boolean isCorrect;
 
     public String getText() { return text; }
-    public boolean isCorrect() { return isCorrect; }
+    public boolean getIsCorrect() { return isCorrect; }
 
-    // setters required for Jackson or Gson
+    // setters required for Jackson
     public void setText(String text) { this.text = text; }
-    public void setCorrect(boolean isCorrect) { this.isCorrect = isCorrect; }
+    public void setIsCorrect(boolean isCorrect) { this.isCorrect = isCorrect; }
 }

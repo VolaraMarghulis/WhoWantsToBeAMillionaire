@@ -10,4 +10,39 @@ public class Question {
 
     public void setQuestionText(String questionText) { this.questionText = questionText; }
     public void setAnswers(Answer[] answers) { this.answers = answers; }
+
+    // <------ return correct answer and check if is not null
+    public Answer getCorrectAnswer() {
+        for (Answer answer : answers) {
+            if (answer != null && answer.getIsCorrect()) {
+                return answer;
+            }
+        }
+        return null;
+    }
+    // <------ returns all wrong answers in a new array
+    public Answer[] getWrongAnswers() {
+        int count = 0;
+        // Count wrong answers to create new array[count length]
+        for (Answer answer : answers) {
+            if (answer != null && !answer.getIsCorrect()) {
+                count++;
+            }
+        }
+        Answer[] wrongs = new Answer[count];
+        int i = 0;
+        for (Answer answer : answers) {
+            if (answer != null && !answer.getIsCorrect()) {
+                wrongs[i++] = answer;
+            }
+        }
+        return wrongs;
+    }
+    // <------ return by index, for future implementation
+    public int getCorrectIndex() {
+        for (int i = 0; i < answers.length; i++) {
+            if (answers[i].getIsCorrect()) return i;
+        }
+        return -1;
+    }
 }
