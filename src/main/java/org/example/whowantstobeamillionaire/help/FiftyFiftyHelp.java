@@ -1,20 +1,18 @@
 package org.example.whowantstobeamillionaire.help;
+
+import javafx.scene.control.Button;
 import org.example.whowantstobeamillionaire.functional.Answer;
 import org.example.whowantstobeamillionaire.functional.Question;
-import java.util.Random;
 
-public class FiftyFiftyHelp extends HelpOption{
-    @Override
-    public HelpAnswer[] getHelpAnswers(Question question) {
-        Answer correctAnswer = question.getCorrectAnswer();
-        Answer[] wrongAnswer = question.getWrongAnswers();
-        Random random = new Random();
-        // <------- selects one of the wrong answers from the wrongAnswers array
-        Answer randomWrongAnswer = wrongAnswer[random.nextInt(wrongAnswer.length)];
-        // <----- HelpAnswer objects, with space for two elements (one correct, one incorrect).
-        HelpAnswer[] result = new HelpAnswer[2];
-        result[0] = new HelpAnswer(correctAnswer, 0.5);
-        result[1] = new HelpAnswer(randomWrongAnswer, 0.5);
-        return result;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class FiftyFiftyHelp {
+    private boolean used = false;
+
+    public boolean isUsed() {
+        return used;
     }
 }
+
