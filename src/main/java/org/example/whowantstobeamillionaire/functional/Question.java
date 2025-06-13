@@ -1,35 +1,33 @@
 package org.example.whowantstobeamillionaire.functional;
-import org.example.whowantstobeamillionaire.functional.Answer;
 
 public class Question {
     private String questionText;
     private Answer[] answers;
 
+    // <---- getters
     public String getQuestionText() { return questionText; }
     public Answer[] getAnswers() { return answers; }
-
-    public void setQuestionText(String questionText) { this.questionText = questionText; }
-    public void setAnswers(Answer[] answers) { this.answers = answers; }
 
     // <------ return correct answer and check if is not null
     public Answer getCorrectAnswer() {
         for (Answer answer : answers) {
             if (answer != null && answer.getIsCorrect()) {
-                return answer;
+                return answer; // <----- correct answer
             }
         }
-        return null;
+        return null; // <---- null if no correct answer
     }
+
     // <------ returns all wrong answers in a new array
     public Answer[] getWrongAnswers() {
-        int count = 0;
-        // Count wrong answers to create new array[count length]
+        int count = 0; // <----  count how many answers are wrong
+
         for (Answer answer : answers) {
-            if (answer != null && !answer.getIsCorrect()) {
+            if (answer != null && !answer.getIsCorrect()) { // <---- how many answers are wrong (not null and !correct)
                 count++;
             }
         }
-        Answer[] wrongs = new Answer[count];
+        Answer[] wrongs = new Answer[count]; // <---- array with wrong answers
         int i = 0;
         for (Answer answer : answers) {
             if (answer != null && !answer.getIsCorrect()) {
@@ -38,11 +36,5 @@ public class Question {
         }
         return wrongs;
     }
-    // <------ return by index, for future implementation
-    public int getCorrectIndex() {
-        for (int i = 0; i < answers.length; i++) {
-            if (answers[i].getIsCorrect()) return i;
-        }
-        return -1;
-    }
+
 }

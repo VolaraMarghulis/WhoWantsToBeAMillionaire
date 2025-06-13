@@ -57,23 +57,23 @@
          <children>
             <Button fx:id="answer3" layoutX="79.0" layoutY="165.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0">
                <font>
-                  <Font name="Cambria" size="18.0" />
+                  <Font name="Cambria" size="14.0" />
                </font></Button>
             <Button fx:id="answer1" layoutX="79.0" layoutY="98.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0">
                <font>
-                  <Font name="Cambria" size="18.0" />
+                  <Font name="Cambria" size="14.0" />
                </font></Button>
             <Button fx:id="answer4" layoutX="312.0" layoutY="165.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0">
                <font>
-                  <Font name="Cambria" size="18.0" />
+                  <Font name="Cambria" size="14.0" />
                </font></Button>
             <Button fx:id="answer2" layoutX="312.0" layoutY="98.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="205.0">
                <font>
-                  <Font name="Candara" size="18.0" />
+                  <Font name="Candara" size="14.0" />
                </font></Button>
             <Label fx:id="questionLabel" layoutX="79.0" layoutY="14.0" prefHeight="61.0" prefWidth="440.0">
                <font>
-                  <Font name="Cambria Bold" size="18.0" />
+                  <Font name="Cambria Bold" size="16.0" />
                </font></Label>
          </children>
     </AnchorPane>

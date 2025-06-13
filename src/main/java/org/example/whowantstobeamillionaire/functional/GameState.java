@@ -12,16 +12,17 @@ public class GameState {
         this.level = 1;
         this.isGameOver = false;
     }
-
+    // <------ getters
     public int getCurrentQuestionIndex() { return currentQuestionIndex; }
-    public void nextQuestion() { currentQuestionIndex++; }
     public int getScore() { return score; }
-    public void addScore(int amount) { score += amount; }
     public int getLevel() { return level; }
-    public void nextLevel() { level++; }
+    public void setGameOver(boolean value) { isGameOver = value; } // <----- setter
     public boolean isGameOver() { return isGameOver; }
-    public void setGameOver(boolean value) { isGameOver = value; }
-
+    // <------ adding method
+    public void nextQuestion() { currentQuestionIndex++; }
+    public void addScore(int amount) { score += amount; }
+    public void nextLevel() { level++; }
+    // <---- reset all states
     public void reset() {
         currentQuestionIndex = 0;
         score = 0;

@@ -1,5 +1,6 @@
 package org.example.whowantstobeamillionaire.functional;
 
+// <----- POJO class
 public class Answer {
     private String text;
     private boolean isCorrect;

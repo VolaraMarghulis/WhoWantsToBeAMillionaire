@@ -13,6 +13,8 @@ import org.example.whowantstobeamillionaire.functional.Answer;
 import org.example.whowantstobeamillionaire.functional.GameEngine;
 import org.example.whowantstobeamillionaire.functional.Question;
 import org.example.whowantstobeamillionaire.functional.QuestionLoader;
+import org.example.whowantstobeamillionaire.help.FiftyFiftyHelp;
+import org.example.whowantstobeamillionaire.help.PhoneFriendHelp;
 
 public class GameController {
     @FXML private Button fiftyFiftyButton, phoneButton, audienceButton;
@@ -20,19 +22,20 @@ public class GameController {
     @FXML private Button answer1, answer2, answer3, answer4;
     @FXML private Label questionLabel, levelLabel, scoreLabel, timeLabel;
 
-    private GameEngine engine;
+    private GameEngine engine; // <---- game logic
 
     @FXML
     public void initialize() {
+        // <----- load questions from JSON file
         Question[] questions = QuestionLoader.loadQuestions("/questions.json");
-        engine = new GameEngine(questions);
+        engine = new GameEngine(questions); // <---- create game engine instance
 
-        hideAnswers();
+        hideAnswers(); // <---- hide answer buttons until game starts
         questionLabel.setText("Press Start to play!");
-
+        // <------- set event handlers for fyftyFyfty/phoneFriend
         fiftyFiftyButton.setOnAction(e -> onFiftyFiftyClicked());
         phoneButton.setOnAction(e -> onPhoneButtonClicked());
-
+        // <----- Set event handlers for answer buttons
         answer1.setOnAction(this::onAnswerClicked);
         answer2.setOnAction(this::onAnswerClicked);
         answer3.setOnAction(this::onAnswerClicked);
@@ -40,24 +43,26 @@ public class GameController {
     }
 
     @FXML
-    private void onStartButtonClicked() {
-        engine.reset();
-        updateScoreAndLevel();
-        showQuestion();
-        startButton.setDisable(true);
+    private void onStartButtonClicked() { // <----- called when Start button is clicked
+        engine.reset(); // <------- reset from last game (in case)
+        updateScoreAndLevel(); // <------- show updated score and level
+        showQuestion(); // <------- display the first question
+        startButton.setDisable(true); // <------- disable Start button during the game
     }
-
+    // <----- displays the current question and shuffles answers before showing
     private void showQuestion() {
-        Question q = engine.getCurrentQuestion();
-        if (q == null) {
+        Question question = engine.getCurrentQuestion();
+
+        if (question == null) {
             questionLabel.setText("No questions available!");
             return;
         }
 
-        questionLabel.setText(q.getQuestionText());
-        List<Answer> shuffled = Arrays.asList(q.getAnswers().clone());
-        Collections.shuffle(shuffled);
+        questionLabel.setText(question.getQuestionText()); // <----- set question text
+        List<Answer> shuffled = Arrays.asList(question.getAnswers().clone());
+        Collections.shuffle(shuffled); // <------ // shuffle answers
 
+        // <----- assign shuffled answers to buttons and make sure they are visible
         Button[] buttons = {answer1, answer2, answer3, answer4};
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setText(shuffled.get(i).getText());
@@ -67,43 +72,44 @@ public class GameController {
     }
 
     @FXML
+    // <----  checks if the selected answer is correct and updates game state
     private void onAnswerClicked(ActionEvent event) {
         Button clicked = (Button) event.getSource();
         Answer selected = (Answer) clicked.getUserData();
 
-        boolean correct = engine.answer(selected.getText());
+        boolean correct = engine.answer(selected.getText()); // <---- // check the answer with the game engine
         updateScoreAndLevel();
-
+        // <---- Check if the game ended after this answer
         if (engine.isGameOver()) {
-            questionLabel.setText(correct ? "🎉 You won! Final score: " + engine.getState().getScore()
+            // <------ show final message depending on case
+            questionLabel.setText(correct ? "You won! \n Final score: " + engine.getState().getScore()
                     : "Wrong answer! Final score: " + engine.getState().getScore());
-            endGame();
+            endGame();  //  <------ // clean up UI after game over
         } else {
-            showQuestion();
+            showQuestion(); // <----- // show next question if game continues
         }
     }
 
+    // <----- hides two incorrect answers from the current question
     private void onFiftyFiftyClicked() {
         Question current = engine.getCurrentQuestion();
-        Answer[] wrongs = current.getWrongAnswers();
-        Collections.shuffle(Arrays.asList(wrongs));
-
+        Answer[] toHide = FiftyFiftyHelp.getTwoWrongAnswersToHide(current);
+        // <------ hide the buttons that correspond to the two answers
         for (Button btn : new Button[]{answer1, answer2, answer3, answer4}) {
             Answer a = (Answer) btn.getUserData();
-            if (a.equals(wrongs[0]) || a.equals(wrongs[1])) {
+            if (a.equals(toHide[0]) || a.equals(toHide[1])) {
                 btn.setVisible(false);
             }
         }
-        fiftyFiftyButton.setDisable(true);
+        fiftyFiftyButton.setDisable(true); // <------- disable 50/50 button after use
     }
 
+    // <-------- shows a friend’s suggestion as a hint in the question label
     private void onPhoneButtonClicked() {
         Question current = engine.getCurrentQuestion();
-        double confidence = Math.random();
-        String suggestion = confidence < 0.8 ? current.getCorrectAnswer().getText()
-                : current.getAnswers()[(int)(Math.random() * 4)].getText();
-        questionLabel.setText("Friend suggests: " + suggestion);
-        phoneButton.setDisable(true);
+        String message = PhoneFriendHelp.getFriendSuggestion(current);
+        questionLabel.setText(message);
+        phoneButton.setDisable(true); // <----- disable phone help after use
     }
 
     private void updateScoreAndLevel() {
@@ -111,6 +117,7 @@ public class GameController {
         levelLabel.setText("Level: " + engine.getState().getLevel());
     }
 
+    // <----- hides answer buttons and re-enables the Start button.
     private void endGame() {
         hideAnswers();
         startButton.setDisable(false);
